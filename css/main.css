@@ -1,0 +1,536 @@
+@charset "UTF-8";
+.left-slide-animation {
+  -webkit-animation: left-slide-animation 1s 1s cubic-bezier(0.01, 0.85, 0.38, 1.03) forwards;
+          animation: left-slide-animation 1s 1s cubic-bezier(0.01, 0.85, 0.38, 1.03) forwards;
+}
+
+@-webkit-keyframes left-slide-animation {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes left-slide-animation {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.right-slide-animation {
+  -webkit-animation: right-slide-animation 1s 1s cubic-bezier(0.01, 0.85, 0.38, 1.03) forwards;
+          animation: right-slide-animation 1s 1s cubic-bezier(0.01, 0.85, 0.38, 1.03) forwards;
+}
+
+@-webkit-keyframes right-slide-animation {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes right-slide-animation {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+@-webkit-keyframes job-ad-shadow-animation {
+  from {
+    box-shadow: inset 0 0 2px 0px rgba(0, 0, 0, 0.15);
+  }
+  25% {
+    box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  }
+  to {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  }
+}
+@keyframes job-ad-shadow-animation {
+  from {
+    box-shadow: inset 0 0 2px 0px rgba(0, 0, 0, 0.15);
+  }
+  25% {
+    box-shadow: inset 0 0 3px 1px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.15);
+  }
+  to {
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.15);
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(180deg, 52%, 96%);
+  font-size: 1.5rem;
+  font-family: "League Spartan", sans-serif;
+}
+
+.header {
+  height: 20vh;
+  width: 100%;
+  margin-bottom: 3em;
+  overflow: hidden;
+}
+.header .shadow-img {
+  background-image: radial-gradient(circle, rgba(168, 243, 243, 0.831) 73%, rgb(152, 231, 231) 84%, rgb(135, 212, 212) 100%);
+}
+.header .heading {
+  text-align: center;
+  padding: 0.4em;
+  transform: translateX(-150%);
+}
+.header .heading .fa-regular {
+  font-size: 3rem;
+  margin: 0.1em;
+}
+.header h2 {
+  text-align: center;
+  padding: 0.25em;
+  transform: translateX(150%);
+}
+.header h2 .fa-regular {
+  margin: 0.5rem;
+}
+.header .header-img {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/bg-header-mobile.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.circle-up-btn {
+  display: none;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.hide {
+  display: none;
+}
+
+.categories-window {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 100px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 6px 8px 20px 0px rgba(107, 106, 106, 0.36);
+}
+.categories-window .clear-block {
+  position: absolute;
+  right: 5%;
+  padding: 1em;
+  cursor: pointer;
+}
+.categories-window .clear-block p {
+  position: relative;
+  color: #63baba;
+  font-weight: 500;
+  z-index: 5;
+}
+.categories-window .categories-container {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 1em;
+  background-color: hsl(180deg, 31%, 95%);
+}
+.categories-window .categories-container p {
+  color: hsl(180deg, 29%, 50%);
+  padding: 5px 10px;
+}
+.categories-window .categories-container .x-icon {
+  height: 25px;
+  width: 25px;
+  border: transparent;
+  transition: background-color 0.15s, transform 0.4s;
+  cursor: pointer;
+  background-image: url("../images/icon-remove.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsl(180deg, 29%, 50%);
+}
+.categories-window .categories-container .x-icon:hover,
+.categories-window .categories-container .x-icon:focus {
+  transform: rotate(180deg);
+  background-color: rgb(20, 19, 19);
+}
+
+.job-ads-list {
+  width: auto;
+  height: 3200px;
+}
+.job-ads-list .hide {
+  display: none;
+}
+.job-ads-list i {
+  color: aqua;
+  font-size: 8rem;
+  z-index: -10;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-ad {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 300px;
+  height: 250px;
+  margin: 2em 1.5em;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 6px 8px 20px 0px rgba(107, 106, 106, 0.3607843137);
+}
+.job-ad p {
+  font-size: 1.5rem;
+}
+.job-ad .information {
+  padding: 0.5em;
+}
+.job-ad .company-name {
+  margin-top: 1em;
+  font-weight: 700;
+  color: hsl(180deg, 29%, 50%);
+}
+.job-ad .company-name p {
+  font-size: 2rem;
+}
+.job-ad .position {
+  margin: 1.5em 0;
+  color: black;
+}
+.job-ad .position:hover {
+  color: hsl(180deg, 29%, 50%);
+}
+.job-ad .additional-info {
+  display: flex;
+  justify-content: flex-start;
+  color: hsl(180deg, 8%, 52%);
+  font-weight: 500;
+}
+.job-ad .additional-info .posted-at::after {
+  content: "•";
+  padding: 0.5em;
+  font-size: 1.5rem;
+}
+.job-ad .additional-info .contract::after {
+  content: "•";
+  padding: 0.5em;
+  font-size: 1.5rem;
+}
+.job-ad .logo {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+.job-ad .logo img {
+  width: 50px;
+  height: 50px;
+}
+.job-ad .tools .tool {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0.3em;
+  background-color: hsl(180deg, 31%, 95%);
+  color: hsl(180deg, 29%, 50%);
+  font-weight: 700;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.featured {
+  border-left: 5px solid hsl(180deg, 29%, 50%);
+}
+
+.atributes {
+  position: absolute;
+  transform: translateX(0);
+  right: 10%;
+  top: 15%;
+}
+.atributes span {
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+.atributes span p {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+}
+.atributes .new-span {
+  background-color: hsl(180deg, 29%, 50%);
+}
+.atributes .featured-span {
+  background-color: hsl(180deg, 14%, 20%);
+}
+
+.footer {
+  width: 100%;
+  height: 300px;
+  bottom: 0;
+  background-image: url("../img/buildings1-sm.jpg");
+  background-position: top;
+  background-size: cover;
+}
+.footer .footer-img-shadow {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(73, 117, 161, 0.4) 52%, rgba(65, 109, 163, 0.4) 100%);
+}
+.footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.footer .footer-container h4 {
+  font-size: 2.5rem;
+  margin: 0.5em;
+  color: #fff;
+}
+.footer .footer-container .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.footer .footer-container .social-media i {
+  color: #fff;
+  padding: 0.5em;
+  font-size: 3rem;
+  transition: color 0.3s, transform 0.3s;
+}
+.footer .footer-container .social-media i:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.1);
+}
+.footer .footer-container .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer .footer-container .contact i,
+.footer .footer-container .contact p {
+  display: inline-block;
+  padding: 0.5em;
+  font-weight: bold;
+  color: #fff;
+}
+.footer .footer-container .contact i {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  .categories-window {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 100px;
+  }
+  .categories-window .clear-block p {
+    font-size: 2rem;
+  }
+  .categories-window .clear-block p::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -20%;
+    left: -20%;
+    width: 140%;
+    height: 0;
+    border-radius: 5px;
+    transform: rotateX(-50%);
+    transition: height 0.2s;
+    background-color: black;
+    z-index: -5;
+  }
+  .categories-window .clear-block p:hover::after {
+    height: 160%;
+  }
+  .categories-window .clear-block p:hover {
+    color: white;
+  }
+  .header {
+    height: 200px;
+  }
+  .header .heading {
+    font-size: 5rem;
+    padding: 0.5em;
+  }
+  .header .heading .fa-regular {
+    font-size: 5rem;
+  }
+  .header h2 {
+    font-size: 3rem;
+    padding: 0.2em;
+  }
+  .header h2 .fa-regular {
+    margin: 0.5em;
+  }
+  .header .header-img {
+    height: 100%;
+    background-image: url("../images/bg-header-desktop.svg");
+  }
+  .job-ads-list {
+    width: auto;
+    height: 2200px;
+  }
+  .job-ad {
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 90%;
+    height: 150px;
+    border-radius: 5px;
+    transition: transform 0.2s;
+  }
+  .job-ad hr {
+    display: none;
+  }
+  .job-ad .logo {
+    position: unset;
+    transform: none;
+    margin: 1em;
+  }
+  .job-ad .logo img {
+    width: 70px;
+    height: 70px;
+  }
+  .job-ad .company-name {
+    margin-top: 0em;
+  }
+  .job-ad .company-name p {
+    font-size: 1.8rem;
+  }
+  .job-ad .position {
+    margin: 0.8em 0;
+    cursor: pointer;
+  }
+  .job-ad .information {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0.5em 1em;
+  }
+  .job-ad .tools {
+    position: absolute;
+    right: 1em;
+    width: 40%;
+    text-align: end;
+  }
+  .job-ad .tools .tool {
+    margin: 1em;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  .job-ad .tools .tool p {
+    font-size: 1.1rem;
+  }
+  .job-ad .tools .tool:hover {
+    background-color: hsl(180deg, 29%, 50%);
+    color: hsl(180deg, 31%, 95%);
+  }
+  .job-ad .atributes {
+    position: absolute;
+    transform: translateX(0);
+    right: 0;
+    top: 3%;
+  }
+  .job-ad:hover {
+    transform: scale(0.99);
+    -webkit-animation: job-ad-shadow-animation 0.2s forwards;
+            animation: job-ad-shadow-animation 0.2s forwards;
+  }
+  .footer {
+    background-image: url("../img/buildings1-lg.jpg");
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .footer h4 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .circle-up-btn {
+    display: none;
+    position: fixed;
+    bottom: 320px;
+    font-size: 4rem;
+    left: calc(50% + 550px);
+    color: #63BABA;
+    cursor: pointer;
+  }
+  .job-ad .tools {
+    width: 50%;
+  }
+  .job-ad .tools .tool {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1300px) {
+  .circle-up-btn {
+    left: calc(50% + 600px);
+  }
+}/*# sourceMappingURL=main.css.map */
